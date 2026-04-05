@@ -4,7 +4,7 @@ from fastai.vision.all import *
 import pathlib
 import platform
 
-MODEL_URL = "https://github.com/Prathamesh-2506/ai-eye-disease-detection/releases/tag/v1.0"
+MODEL_URL = "https://github.com/Prathamesh-2506/03-ai-eye-disease-detection/releases/download/v1.0/eye_disease_model.pkl"
 MODEL_PATH = "eye_disease_model.pkl"
 
 # Download model if not present
