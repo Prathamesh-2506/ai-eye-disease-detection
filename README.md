@@ -11,6 +11,7 @@ Eye disease images organized into five class folders. The original dataset is au
 - fastai / fastcore
 - PyTorch (via fastai)
 - Pillow
+- ipython
 - pandas
 - numpy
 - matplotlib
