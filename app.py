@@ -1,15 +1,24 @@
+import urllib.request
 import streamlit as st
 from fastai.vision.all import *
 import pathlib
 import platform
 
+MODEL_URL = "https://github.com/Prathamesh-2506/ai-eye-disease-detection/releases/tag/v1.0"
+MODEL_PATH = "eye_disease_model.pkl"
+
+# Download model if not present
+if not os.path.exists(MODEL_PATH):
+    with st.spinner("Downloading AI model..."):
+        urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
+
 # Windows path compatibility
 system = platform.system()
-if system == 'Windows':
+if system == "Windows":
     pathlib.PosixPath = pathlib.WindowsPath
 
-# Load trained model
-learn = load_learner('models/eye_disease_model.pkl')
+# Load model
+learn = load_learner(MODEL_PATH)
 
 # Disease knowledge base
 DISEASE_INFO = {
