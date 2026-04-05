@@ -1,0 +1,6 @@
+streamlit
+fastai
+fastcore
+torch
+torchvision
+pillow
