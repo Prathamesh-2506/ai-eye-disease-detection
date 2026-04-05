@@ -9,8 +9,9 @@ MODEL_PATH = "eye_disease_model.pkl"
 
 # Download model if not present
 if not os.path.exists(MODEL_PATH):
-    with st.spinner("Downloading AI model..."):
-        urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
+    os.remove(MODEL_PATH)
+with st.spinner("Downloading AI model..."):
+    urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
 
 # Windows path compatibility
 system = platform.system()
